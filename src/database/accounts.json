@@ -1,0 +1,10 @@
+[
+    {
+        "id": "facebook",
+        "platform": "Facebook",
+        "loginUrl": "https://facebook.com",
+        "username": "marketing@empresa.com",
+        "encryptedPassword": "...",
+        "totpSecret": "..."
+    }
+]

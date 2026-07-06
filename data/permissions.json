@@ -1,0 +1,12 @@
+[
+    {
+        "portalUser": "orlando",
+        "accountId": "facebook",
+        "allowed": true
+    },
+    {
+        "portalUser": "juan",
+        "accountId": "facebook",
+        "allowed": false
+    }
+]

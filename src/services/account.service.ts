@@ -2,6 +2,7 @@ import { AccountRepository } from "../repositories/account.repository.js";
 import { UserRepository } from "../repositories/user.repository.js";
 import { PermissionRepository } from "../repositories/permission.repository.js";
 import { AccountDTO } from "../types/account.dto.js";
+import { AppError } from "../errors/app-error.js";
 
 export class AccountService {
 
@@ -14,7 +15,10 @@ export class AccountService {
         const user = this.userRepository.findById(userId);
 
         if (!user) {
-            throw new Error("User not found");
+            throw new AppError(
+                "User not found",
+                404
+            );
         }
 
         const permissions = this.permissionRepository.findByUserId(userId);

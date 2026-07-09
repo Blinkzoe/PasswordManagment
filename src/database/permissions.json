@@ -1,0 +1,10 @@
+[
+    {
+        "userId": "u1",
+        "accountId": "facebook"
+    }, 
+    {
+        "userId": "u1",
+        "accountId": "facebook2"
+    }
+]

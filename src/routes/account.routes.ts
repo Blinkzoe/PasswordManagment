@@ -7,7 +7,10 @@ const router = Router();
 const accountController = new AccountController();
 
 
-router.get("/", accountController.getAccounts);
+router.get(
+    "/user/:userId",
+    accountController.getAccountsByUserId
+);
 
 
 export default router;

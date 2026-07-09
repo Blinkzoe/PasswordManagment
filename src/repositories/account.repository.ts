@@ -28,6 +28,14 @@ export class AccountRepository {
         return accounts;
 
     }
+    
+    public findByIds(ids: string[]): Account[] {
+
+    const accounts = this.findAll();
+
+    return accounts.filter(account => ids.includes(account.id));
+
+    }
 
 
 }

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { AccountController } from "../controllers/account.controller.js";
-
+import { authMiddleware } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
@@ -8,8 +8,9 @@ const accountController = new AccountController();
 
 
 router.get(
-    "/user/:userId",
-    accountController.getAccountsByUserId
+    "/",
+    authMiddleware,
+    accountController.getMyAccounts
 );
 
 

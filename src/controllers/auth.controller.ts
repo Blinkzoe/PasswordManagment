@@ -7,16 +7,16 @@ export class AuthController {
     private authService = new AuthService();
 
 
-    public login = (
+    public login = async (
         req: Request,
         res: Response
-    ): void => {
+    ): Promise<void> => {
 
 
         const { username, password } = req.body;
 
 
-        const result = this.authService.login(
+        const result = await this.authService.login(
             username,
             password
         );

@@ -1,7 +1,7 @@
 import { UserRepository } from "../repositories/user.repository.js";
 import { generateToken } from "../utils/jwt.js";
 import { AppError } from "../errors/app-error.js";
-
+import {comparePassword} from "../utils/password.js";
 
 export class AuthService {
 
@@ -10,7 +10,7 @@ export class AuthService {
 
 
 
-    public login(
+    public async login(
         username: string,
         password: string
     ) {
@@ -32,20 +32,25 @@ export class AuthService {
 
 
 
-        if (user.password !== password) {
+        const isPasswordValid = await comparePassword(
+            password,
+            user.password
+        );
+
+        if (!isPasswordValid) {
 
             throw new AppError(
                 "Invalid credentials",
                 401
             );
-
         }
 
 
 
         const token = generateToken({
 
-            userId: user.id
+            userId: user.id,
+            role: user.role
 
         });
 

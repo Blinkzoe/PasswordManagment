@@ -1,7 +1,11 @@
 export interface Permission {
 
+    id: string;
+
     userId: string;
 
-    accountId: string;
+    resource: string;
+
+    action: string;
 
 }

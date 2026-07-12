@@ -2,6 +2,8 @@ export interface Account {
 
     id: string;
 
+    userId: string;
+
     platform: string;
 
     loginUrl: string;

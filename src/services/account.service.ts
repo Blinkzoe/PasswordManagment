@@ -10,7 +10,7 @@ export class AccountService {
     private userRepository = new UserRepository();
     private permissionRepository = new PermissionRepository();
 
-    public getAccountsByUserId(userId: string): AccountDTO[] {
+    public getMyAccounts(userId: string): AccountDTO[] {
 
         const user = this.userRepository.findById(userId);
 

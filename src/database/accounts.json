@@ -1,6 +1,7 @@
 [
     {
         "id": "facebook",
+        "userId": "u1",
         "platform": "Facebook",
         "loginUrl": "https://facebook.com",
         "username": "marketing@empresa.com",

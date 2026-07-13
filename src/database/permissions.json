@@ -1,10 +1,14 @@
 [
     {
-        "userId": "u1",
-        "accountId": "facebook"
-    }, 
+        "id":"p1",
+        "userId":"u1",
+        "accountId":"facebook",
+        "role":"viewer"
+    },
     {
-        "userId": "u1",
-        "accountId": "facebook2"
+        "id":"p2",
+        "userId":"admin",
+        "accountId":"facebook",
+        "role":"owner"
     }
 ]

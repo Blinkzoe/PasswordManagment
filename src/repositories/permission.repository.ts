@@ -37,4 +37,18 @@ export class PermissionRepository {
 
     }
 
+    public hasAccess(
+    userId: string,
+    accountId: string
+    ): boolean {
+
+        const permissions = this.findByUserId(userId);
+
+        return permissions.some(
+            permission =>
+                permission.accountId === accountId
+        );
+
+    }
+
 }

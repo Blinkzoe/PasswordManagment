@@ -5,6 +5,7 @@ export class AccountController {
 
     private accountService = new AccountService();
 
+
     public getMyAccounts = (
         req: Request,
         res: Response
@@ -16,6 +17,26 @@ export class AccountController {
             this.accountService.getMyAccounts(userId);
 
         res.json(accounts);
+
+    };
+
+
+    public getAccountById = (
+        req: Request<{ accountId: string }>,
+        res: Response
+    ): void => {
+
+        const userId = req.user.userId;
+
+        const { accountId } = req.params;
+
+        const account =
+            this.accountService.getAccountById(
+                userId,
+                accountId
+            );
+
+        res.json(account);
 
     };
 

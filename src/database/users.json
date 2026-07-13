@@ -1,14 +1,14 @@
 [
     {
-        "id":"u1",
-        "username":"orlando",
-        "password":"...",
-        "role":"user"
+        "id": "u1",
+        "username": "orlando",
+        "password": "$2b$10$21p024aTFCQ8tjrgEthyZO4Kz0pqjS86A8D6eTK63nASUkCEFV7Q.",
+        "role": "user"
     },
     {
-        "id":"admin",
-        "username":"admin",
-        "password":"...",
-        "role":"admin"
+        "id": "admin",
+        "username": "admin",
+        "password": "$2b$10$21p024aTFCQ8tjrgEthyZO4Kz0pqjS86A8D6eTK63nASUkCEFV7Q.",
+        "role": "admin"
     }
 ]

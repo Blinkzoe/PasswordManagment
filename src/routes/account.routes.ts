@@ -12,6 +12,10 @@ router.get(
     authMiddleware,
     accountController.getMyAccounts
 );
-
+router.get(
+    "/:accountId",
+    authMiddleware,
+    accountController.getAccountById
+);
 
 export default router;

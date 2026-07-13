@@ -1,4 +1,4 @@
-export interface Account {
+export interface AccountDetailDTO {
 
     id: string;
 
@@ -7,9 +7,5 @@ export interface Account {
     loginUrl: string;
 
     username: string;
-
-    encryptedPassword: string;
-
-    totpSecret: string;
 
 }

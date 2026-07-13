@@ -2,43 +2,130 @@ import { AccountRepository } from "../repositories/account.repository.js";
 import { UserRepository } from "../repositories/user.repository.js";
 import { PermissionRepository } from "../repositories/permission.repository.js";
 import { AccountDTO } from "../types/account.dto.js";
+import { AccountDetailDTO } from "../types/account-detail.dto.js";
+import { Account } from "../types/account.js";
 import { AppError } from "../errors/app-error.js";
 
 export class AccountService {
 
     private accountRepository = new AccountRepository();
+
     private userRepository = new UserRepository();
+
     private permissionRepository = new PermissionRepository();
 
-    public getMyAccounts(userId: string): AccountDTO[] {
+
+    public getMyAccounts(
+        userId: string
+    ): AccountDTO[] {
 
         const user = this.userRepository.findById(userId);
 
         if (!user) {
+
             throw new AppError(
                 "User not found",
                 404
             );
+
         }
 
-        const permissions = this.permissionRepository.findByUserId(userId);
+        if (user.role === "admin") {
 
-        const accountIds = permissions.map(
-            permission => permission.accountId
-        );
+            const accounts =
+                this.accountRepository.findAll();
 
-        const accounts = this.accountRepository.findByIds(accountIds);
+            return accounts.map(account => ({
 
-        const accountsDTO = accounts.map(account => {
-
-            return {
                 id: account.id,
+
                 platform: account.platform
-            };
 
-        });
+            }));
 
-        return accountsDTO;
+        }
+
+        const permissions =
+            this.permissionRepository.findByUserId(userId);
+
+        const accountIds =
+            permissions.map(
+                permission => permission.accountId
+            );
+
+        const accounts =
+            this.accountRepository.findByIds(accountIds);
+
+        return accounts.map(account => ({
+
+            id: account.id,
+
+            platform: account.platform
+
+        }));
+
+    }
+
+
+    public getAccountById(
+        userId: string,
+        accountId: string
+    ): AccountDetailDTO {
+
+        const account =
+            this.accountRepository.findById(accountId);
+
+        if (!account) {
+
+            throw new AppError(
+                "Account not found",
+                404
+            );
+
+        }
+
+        const user =
+            this.userRepository.findById(userId);
+
+        if (!user) {
+
+            throw new AppError(
+                "User not found",
+                404
+            );
+
+        }
+
+        if (user.role !== "admin") {
+
+            const hasAccess =
+                this.permissionRepository.hasAccess(
+                    userId,
+                    accountId
+                );
+
+            if (!hasAccess) {
+
+                throw new AppError(
+                    "Forbidden",
+                    403
+                );
+
+            }
+
+        }
+
+    return {
+
+        id: account.id,
+
+        platform: account.platform,
+
+        loginUrl: account.loginUrl,
+
+        username: account.username
+
+    };
 
     }
 

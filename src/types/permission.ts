@@ -4,8 +4,8 @@ export interface Permission {
 
     userId: string;
 
-    resource: string;
+    accountId: string;
 
-    action: string;
+    role: string;
 
 }

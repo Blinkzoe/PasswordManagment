@@ -2,9 +2,7 @@ import fs from "fs";
 import path from "path";
 import { Account } from "../types/account.js";
 
-
 export class AccountRepository {
-
 
     public findAll(): Account[] {
 
@@ -15,27 +13,37 @@ export class AccountRepository {
             "accounts.json"
         );
 
-
         const fileContent = fs.readFileSync(
             filePath,
             "utf-8"
         );
 
-
         const accounts: Account[] = JSON.parse(fileContent);
-
 
         return accounts;
 
     }
-    
-    public findByIds(ids: string[]): Account[] {
 
-    const accounts = this.findAll();
+    public findByIds(
+        ids: string[]
+    ): Account[] {
 
-    return accounts.filter(account => ids.includes(account.id));
+        const accounts = this.findAll();
+
+        return accounts.filter(
+            account => ids.includes(account.id)
+        );
 
     }
+    public findById(
+        id: string
+    ): Account | undefined {
 
+        const accounts = this.findAll();
 
+        return accounts.find(
+            account => account.id === id
+        );
+
+    }
 }

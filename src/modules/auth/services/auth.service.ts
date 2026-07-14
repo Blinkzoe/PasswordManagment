@@ -1,7 +1,7 @@
 import { UserRepository } from "../repositories/user.repository.js";
-import { generateToken } from "../utils/jwt.js";
-import { AppError } from "../errors/app-error.js";
-import {comparePassword} from "../utils/password.js";
+import { generateToken } from "../../../shared/utils/jwt.js";
+import { AppError } from "../../../shared/errors/app-error.js";
+import { comparePassword } from "../../../shared/utils/password.js";
 
 export class AuthService {
 

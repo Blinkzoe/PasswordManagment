@@ -1,8 +1,8 @@
-import { AccountRepository } from "../repositories/account.repository.js";
-import { PermissionRepository } from "../repositories/permission.repository.js";
-import { decrypt } from "../utils/encryption.js";
-import { AppError } from "../errors/app-error.js";
-import { AuditRepository } from "../repositories/audit.repository.js";
+import { AccountRepository } from "../../accounts/repositories/account.repository.js";
+import { PermissionRepository } from "../../permissions/repositories/permission.repository.js";
+import { decrypt } from "./encryption.js";
+import { AppError } from "../../../shared/errors/app-error.js";
+import { AuditRepository } from "../../audit/repositories/audit.repository.js";
 import crypto from "crypto";
 
 export class PasswordService {

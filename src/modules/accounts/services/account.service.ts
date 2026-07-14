@@ -1,10 +1,9 @@
 import { AccountRepository } from "../repositories/account.repository.js";
-import { UserRepository } from "../repositories/user.repository.js";
-import { PermissionRepository } from "../repositories/permission.repository.js";
 import { AccountDTO } from "../types/account.dto.js";
 import { AccountDetailDTO } from "../types/account-detail.dto.js";
-import { Account } from "../types/account.js";
-import { AppError } from "../errors/app-error.js";
+import { UserRepository } from "../../auth/repositories/user.repository.js";
+import { PermissionRepository } from "../../permissions/repositories/permission.repository.js";
+import { AppError } from "../../../shared/errors/app-error.js";
 
 export class AccountService {
 

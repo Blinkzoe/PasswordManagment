@@ -40,5 +40,19 @@
         "action": "REVEAL_PASSWORD",
         "resource": "odessatek",
         "timestamp": "2026-07-14T12:38:11.309Z"
+    },
+    {
+        "id": "cbb08b0c-1c8d-4416-822b-d6733712e7ec",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "facebook",
+        "timestamp": "2026-07-14T13:39:19.096Z"
+    },
+    {
+        "id": "471f3469-cccc-4ee4-804f-0363d6d171e9",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T13:39:43.982Z"
     }
 ]

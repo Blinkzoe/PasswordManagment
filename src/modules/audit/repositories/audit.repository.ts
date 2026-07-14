@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { AuditLog } from "../types/audit-log.js";
-
+import { AuditLog } from "../../../shared/types/audit-log.js";
 
 export class AuditRepository {
 

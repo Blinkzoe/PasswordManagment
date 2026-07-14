@@ -1,4 +1,4 @@
-import { encrypt } from "../utils/encryption.js";
+import { encrypt } from "../modules/vault/services/encryption.js";
 
 const password = "asdsdpkpdkpainfe";
 

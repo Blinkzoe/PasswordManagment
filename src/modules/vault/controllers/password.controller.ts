@@ -20,8 +20,8 @@ export class PasswordController {
             req.user.userId;
 
 
-        const { accountId } =
-            req.params;
+        const accountId =
+            String(req.params.accountId);
 
 
 

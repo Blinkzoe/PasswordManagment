@@ -1,4 +1,4 @@
-import { hashPassword } from "../utils/password.js";
+import { hashPassword } from "../shared/utils/password.js";
 
 async function main(): Promise<void> {
 

@@ -1,6 +1,6 @@
 import { randomUUID } from "crypto";
 import { Browser, BrowserContext, Page } from "playwright";
-import { Session } from "./session.js";
+import { Session } from "../types/session.js";
 
 export class SessionManager {
 

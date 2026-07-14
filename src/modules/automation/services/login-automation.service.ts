@@ -1,6 +1,6 @@
 import { OdessaTekConnector } from "../connectors/odessatek.connector.js";
-import { AccountRepository } from "../repositories/account.repository.js";
-import { PasswordService } from "./password.service.js";
+import { AccountRepository } from "../../accounts/repositories/account.repository.js";
+import { PasswordService } from "../../vault/services/password.service.js";
 
 export class LoginAutomationService {
 

@@ -1,17 +1,22 @@
 import crypto from "crypto";
 import { env } from "../config/env.js";
 
+
 const algorithm = "aes-256-cbc";
 
+
 const key = Buffer.from(
-    env.ENCRYPTION_KEY
+    env.ENCRYPTION_KEY,
+    "utf8"
 );
 
-const iv = Buffer.alloc(16, 0);
 
 export function encrypt(
     text: string
 ): string {
+
+    const iv = crypto.randomBytes(16);
+
 
     const cipher =
         crypto.createCipheriv(
@@ -20,6 +25,7 @@ export function encrypt(
             iv
         );
 
+
     let encrypted =
         cipher.update(
             text,
@@ -27,17 +33,35 @@ export function encrypt(
             "hex"
         );
 
+
     encrypted += cipher.final(
         "hex"
     );
 
-    return encrypted;
+
+    return `${iv.toString("hex")}:${encrypted}`;
 
 }
+
+
 
 export function decrypt(
     encryptedText: string
 ): string {
+
+
+    const [
+        ivHex,
+        encrypted
+    ] = encryptedText.split(":");
+
+
+    const iv =
+        Buffer.from(
+            ivHex,
+            "hex"
+        );
+
 
     const decipher =
         crypto.createDecipheriv(
@@ -46,16 +70,19 @@ export function decrypt(
             iv
         );
 
+
     let decrypted =
         decipher.update(
-            encryptedText,
+            encrypted,
             "hex",
             "utf8"
         );
 
+
     decrypted += decipher.final(
         "utf8"
     );
+
 
     return decrypted;
 

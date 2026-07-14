@@ -1,0 +1,44 @@
+[
+    {
+        "id": "01376b01-4945-49f5-b617-d332e276fbc8",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "facebook",
+        "timestamp": "2026-07-13T17:14:36.657Z"
+    },
+    {
+        "id": "55302919-dda0-4a8b-8cae-660ef4508185",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "facebook",
+        "timestamp": "2026-07-13T22:32:36.780Z"
+    },
+    {
+        "id": "1880f2a2-9012-4405-af96-a039c0a4f38f",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "facebook",
+        "timestamp": "2026-07-13T22:33:19.881Z"
+    },
+    {
+        "id": "918ba3aa-4299-408d-8f8c-3b439bb3b668",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T12:36:29.104Z"
+    },
+    {
+        "id": "d1ffc520-8459-4b77-90da-96475c13f023",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T12:37:54.712Z"
+    },
+    {
+        "id": "c70cbc56-7ffc-48b3-820d-58e5f491f309",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T12:38:11.309Z"
+    }
+]

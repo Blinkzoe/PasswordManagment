@@ -4,7 +4,14 @@
         "platform": "Facebook",
         "loginUrl": "https://facebook.com",
         "username": "marketing@empresa.com",
-        "encryptedPassword": "...",
+        "encryptedPassword": "d874f32965233feef5e6a120bd07cfd1:736b0cf0ca26f1c6d863910e5fa728fd",
         "totpSecret": "..."
+    },
+    {
+        "id":"odessatek",
+        "platform":"OdessaTek",
+        "loginUrl":"https://www.odessatek.com/inicio.php",
+        "username":"blink_zoe@hotmail.com",
+        "encryptedPassword":"53cb628a2224f6a57d8560de6d227fc1:9b6e4f827b5476a4073061952ae982d4"
     }
 ]

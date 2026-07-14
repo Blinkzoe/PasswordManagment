@@ -1,0 +1,10 @@
+
+module my-systemdsleep 1.0;
+
+require {
+	type systemd_sleep_t;
+	class capability2 perfmon;
+}
+
+#============= systemd_sleep_t ==============
+allow systemd_sleep_t self:capability2 perfmon;

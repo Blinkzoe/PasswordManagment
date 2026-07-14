@@ -2,9 +2,9 @@ import { OdessaTekConnector } from "../connectors/odessatek.connector.js";
 import { AccountRepository } from "../../accounts/repositories/account.repository.js";
 import { PasswordService } from "../../vault/services/password.service.js";
 import { BrowserService } from "./browser.service.js";
-import { SessionManager } from "../../sessions/services/session-manager.js";
 import { AuditRepository } from "../../audit/repositories/audit.repository.js";
 import { randomUUID } from "crypto";
+import { sessionManager } from "../../sessions/services/session-manager.instance.js";
 
 export class LoginAutomationService {
 
@@ -24,10 +24,6 @@ export class LoginAutomationService {
     private browserService =
         new BrowserService();
 
-
-    private sessionManager =
-        new SessionManager();
-
     private auditRepository =
         new AuditRepository();
 
@@ -35,6 +31,47 @@ export class LoginAutomationService {
         userId:string,
         accountId:string
     ){
+        const existingSession =
+            await sessionManager.findByAccount(
+                userId,
+                accountId
+            );
+
+
+        if(existingSession){
+
+
+            this.auditRepository.save({
+
+                id: randomUUID(),
+
+                userId,
+
+                action:"SESSION_REUSED",
+
+                resource:accountId,
+
+                metadata:{
+                    sessionId: existingSession.id
+                },
+
+                timestamp:new Date()
+
+            });
+
+
+            return {
+
+                success:true,
+
+                sessionId:
+                    existingSession.id,
+
+                reused:true
+
+            };
+
+        }
 
 
         const account =
@@ -89,7 +126,7 @@ export class LoginAutomationService {
 
 
         const sessionId =
-            this.sessionManager.createSession(
+            sessionManager.createSession(
                 userId,
                 accountId,
                 browserSession.browser,

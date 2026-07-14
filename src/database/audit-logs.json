@@ -92,5 +92,533 @@
             "sessionId": "8b46ff8f-1839-4be9-947a-2b070499b273"
         },
         "timestamp": "2026-07-14T14:35:41.552Z"
+    },
+    {
+        "id": "d1b8ffba-dc50-4aa8-add0-7d3fa0e287c3",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T14:53:57.903Z"
+    },
+    {
+        "id": "16218097-d0ca-48d0-9e27-db7b7c5ab102",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "64e58227-0f6c-4711-9592-03a282aaccc5"
+        },
+        "timestamp": "2026-07-14T14:54:08.009Z"
+    },
+    {
+        "id": "a60ac1cf-05d3-40f5-b101-5aa218283f26",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:01:46.890Z"
+    },
+    {
+        "id": "a61bd94f-d426-4a0b-af60-a83a69d85353",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "da3221cf-92c4-4506-8840-b6ee95b4fe4b"
+        },
+        "timestamp": "2026-07-14T15:01:57.580Z"
+    },
+    {
+        "id": "c24b76fe-1e18-4b26-a783-dbaeb9c89382",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:02:43.484Z"
+    },
+    {
+        "id": "fc08391c-7440-4b1f-af74-3b12dc733af9",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "9bf4ff19-8544-4b94-81e9-094d8db1c33e"
+        },
+        "timestamp": "2026-07-14T15:02:52.705Z"
+    },
+    {
+        "id": "4e1bc20a-53a2-4369-96a7-c8aed12c8df4",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:10:09.631Z"
+    },
+    {
+        "id": "bdd981a2-2a95-47d0-88eb-5cdb9f430ce6",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "4aaf5d5e-e1ab-4ded-a361-1346c4f4fd87"
+        },
+        "timestamp": "2026-07-14T15:10:19.463Z"
+    },
+    {
+        "id": "ec14a79b-f5d7-47c8-b695-8bd1401bcbd5",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:14:32.962Z"
+    },
+    {
+        "id": "699ef469-fc33-4447-8d0b-5e6d7fce7671",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "33e8df0f-eb22-437e-9168-43a4f891ee75"
+        },
+        "timestamp": "2026-07-14T15:14:42.882Z"
+    },
+    {
+        "id": "006f15c4-4f4f-40df-8573-e1968be98be1",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "33e8df0f-eb22-437e-9168-43a4f891ee75"
+        },
+        "timestamp": "2026-07-14T15:14:44.291Z"
+    },
+    {
+        "id": "a0f84265-cd58-448e-8c9e-1598739af692",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "33e8df0f-eb22-437e-9168-43a4f891ee75"
+        },
+        "timestamp": "2026-07-14T15:14:57.492Z"
+    },
+    {
+        "id": "474b733b-c070-4451-9c13-87e7015d8f01",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:19:58.462Z"
+    },
+    {
+        "id": "eeb660a1-7374-4e55-87f6-c5b628312d6e",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "f1210f07-26b4-497a-8a77-34d185acb3c2"
+        },
+        "timestamp": "2026-07-14T15:20:09.465Z"
+    },
+    {
+        "id": "895eb7c2-f950-44fe-9a8b-ff4a1be046a1",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "f1210f07-26b4-497a-8a77-34d185acb3c2"
+        },
+        "timestamp": "2026-07-14T15:20:13.528Z"
+    },
+    {
+        "id": "2cd1a440-9e06-441a-b12e-0ac40e0d21ac",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "f1210f07-26b4-497a-8a77-34d185acb3c2"
+        },
+        "timestamp": "2026-07-14T15:20:15.031Z"
+    },
+    {
+        "id": "5964240a-cdce-4251-b52c-34b94914edea",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "f1210f07-26b4-497a-8a77-34d185acb3c2"
+        },
+        "timestamp": "2026-07-14T15:20:20.230Z"
+    },
+    {
+        "id": "b7cdc522-5874-4857-af72-ee64b0002ac4",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "f1210f07-26b4-497a-8a77-34d185acb3c2"
+        },
+        "timestamp": "2026-07-14T15:20:23.414Z"
+    },
+    {
+        "id": "488dcfce-1249-40ff-8bb3-d443de0eafc8",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "f1210f07-26b4-497a-8a77-34d185acb3c2"
+        },
+        "timestamp": "2026-07-14T15:20:24.431Z"
+    },
+    {
+        "id": "54d83867-c4bf-48ba-baba-fd3b416f06d2",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "f1210f07-26b4-497a-8a77-34d185acb3c2"
+        },
+        "timestamp": "2026-07-14T15:20:25.343Z"
+    },
+    {
+        "id": "6a05e5d7-2f37-47c8-a568-b5d934774e04",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:23:12.784Z"
+    },
+    {
+        "id": "d915ba08-ec13-4e78-9891-b4b0c92a538d",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "94c002c5-3786-4b70-a3c9-bff9efd864dc"
+        },
+        "timestamp": "2026-07-14T15:23:21.980Z"
+    },
+    {
+        "id": "40ec57e8-c918-4872-ac42-0e8e8d6844d0",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "94c002c5-3786-4b70-a3c9-bff9efd864dc"
+        },
+        "timestamp": "2026-07-14T15:23:23.754Z"
+    },
+    {
+        "id": "f380ac91-07a7-4ae8-a7e4-ddb6060f754b",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "94c002c5-3786-4b70-a3c9-bff9efd864dc"
+        },
+        "timestamp": "2026-07-14T15:23:29.033Z"
+    },
+    {
+        "id": "33725f2c-ee5c-4a65-b28d-31edba0809eb",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "94c002c5-3786-4b70-a3c9-bff9efd864dc"
+        },
+        "timestamp": "2026-07-14T15:23:30.121Z"
+    },
+    {
+        "id": "947c5659-35cf-4ec8-8ce0-8a97807b18ec",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "94c002c5-3786-4b70-a3c9-bff9efd864dc"
+        },
+        "timestamp": "2026-07-14T15:23:30.937Z"
+    },
+    {
+        "id": "12664e22-820a-4cb6-976d-cbf0d99bcc10",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "94c002c5-3786-4b70-a3c9-bff9efd864dc"
+        },
+        "timestamp": "2026-07-14T15:23:31.769Z"
+    },
+    {
+        "id": "72be85e6-45d4-41fe-9ffa-a4f5df17e3ea",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "94c002c5-3786-4b70-a3c9-bff9efd864dc"
+        },
+        "timestamp": "2026-07-14T15:23:32.545Z"
+    },
+    {
+        "id": "7a4156a8-46a0-4624-84df-edde133692ad",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:31:55.229Z"
+    },
+    {
+        "id": "82799352-b3e1-4890-9f13-8392d84f5598",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "3c7ec8ba-b150-4e6e-8bb7-be2e5396980a"
+        },
+        "timestamp": "2026-07-14T15:32:06.488Z"
+    },
+    {
+        "id": "450fc70e-a862-4767-a05c-4cd4e00f2f58",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "3c7ec8ba-b150-4e6e-8bb7-be2e5396980a"
+        },
+        "timestamp": "2026-07-14T15:32:08.039Z"
+    },
+    {
+        "id": "79b21d6f-13f3-4cd9-8ebf-c5a6db2dcb2e",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "3c7ec8ba-b150-4e6e-8bb7-be2e5396980a"
+        },
+        "timestamp": "2026-07-14T15:32:14.535Z"
+    },
+    {
+        "id": "fd2c392a-46a6-4c20-ab5a-0b2d59c91ed8",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "3c7ec8ba-b150-4e6e-8bb7-be2e5396980a"
+        },
+        "timestamp": "2026-07-14T15:32:15.870Z"
+    },
+    {
+        "id": "e0424193-3bfc-4760-acb6-eed9630b4813",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:33:59.231Z"
+    },
+    {
+        "id": "5028e240-21b4-404b-8202-ed078309a357",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "c476ab7a-a225-452c-871d-e1407f0b7c57"
+        },
+        "timestamp": "2026-07-14T15:34:09.537Z"
+    },
+    {
+        "id": "81f46479-cf56-4cca-ad0b-824d45f72ea5",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "c476ab7a-a225-452c-871d-e1407f0b7c57"
+        },
+        "timestamp": "2026-07-14T15:34:10.937Z"
+    },
+    {
+        "id": "06b1e26d-ebcb-44d4-bc12-1d2f0ec20869",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "c476ab7a-a225-452c-871d-e1407f0b7c57"
+        },
+        "timestamp": "2026-07-14T15:34:17.216Z"
+    },
+    {
+        "id": "4f5aa8d2-6a42-4382-b257-ede393b6602e",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "c476ab7a-a225-452c-871d-e1407f0b7c57"
+        },
+        "timestamp": "2026-07-14T15:34:18.600Z"
+    },
+    {
+        "id": "cbd3a52a-cad7-4a4c-a6d1-34b2d176a9ae",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "c476ab7a-a225-452c-871d-e1407f0b7c57"
+        },
+        "timestamp": "2026-07-14T15:34:19.503Z"
+    },
+    {
+        "id": "19bd585a-ac2a-4835-9dba-71c718f345ac",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:34:37.519Z"
+    },
+    {
+        "id": "a4fa633e-70e8-4e40-a3dc-c780a04a2c80",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "9aec07f0-061f-4568-9dd7-4a9f8e59e3a4"
+        },
+        "timestamp": "2026-07-14T15:34:48.206Z"
+    },
+    {
+        "id": "5a4a9dcd-f82e-4eaa-9fd3-510b962015ad",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "9aec07f0-061f-4568-9dd7-4a9f8e59e3a4"
+        },
+        "timestamp": "2026-07-14T15:35:13.266Z"
+    },
+    {
+        "id": "fe4634b2-8559-4981-851b-ad22f2ebf41f",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "9aec07f0-061f-4568-9dd7-4a9f8e59e3a4"
+        },
+        "timestamp": "2026-07-14T15:35:21.905Z"
+    },
+    {
+        "id": "b0d83b37-7ec3-4b1d-a8c8-364552dba526",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "9aec07f0-061f-4568-9dd7-4a9f8e59e3a4"
+        },
+        "timestamp": "2026-07-14T15:46:07.192Z"
+    },
+    {
+        "id": "7e26d1eb-0f4d-41c0-a0f7-a31ace42251b",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:46:17.815Z"
+    },
+    {
+        "id": "87418de2-5dad-4504-ace4-6a374ae2e11b",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "814905b8-b3f7-431b-894d-db6e54c8376c"
+        },
+        "timestamp": "2026-07-14T15:46:27.592Z"
+    },
+    {
+        "id": "80bafdc8-6415-4fbe-86c5-c165f50d1d90",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "814905b8-b3f7-431b-894d-db6e54c8376c"
+        },
+        "timestamp": "2026-07-14T15:46:28.811Z"
+    },
+    {
+        "id": "d2f171e3-f857-4ed8-b440-aa6587266def",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "814905b8-b3f7-431b-894d-db6e54c8376c"
+        },
+        "timestamp": "2026-07-14T15:46:37.680Z"
+    },
+    {
+        "id": "b8ed146d-c180-4570-8171-9f64f5df39a7",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:55:21.367Z"
+    },
+    {
+        "id": "ffa7068f-256d-48ab-a50e-c482c71cd498",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "5b96e89a-536e-4c1a-b348-36f52d4cc962"
+        },
+        "timestamp": "2026-07-14T15:55:30.996Z"
+    },
+    {
+        "id": "f294fc74-9152-4e71-81ca-1b2aa3e9b22a",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "5b96e89a-536e-4c1a-b348-36f52d4cc962"
+        },
+        "timestamp": "2026-07-14T15:55:33.928Z"
+    },
+    {
+        "id": "ce369808-bd58-4873-84e8-e4ea9d72e3fe",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:55:39.190Z"
+    },
+    {
+        "id": "fc52ed8b-4654-4031-be7c-b5f0ad61abcb",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "c4f40171-41c2-4dbf-a4b8-7c65671a29fb"
+        },
+        "timestamp": "2026-07-14T15:55:51.462Z"
+    },
+    {
+        "id": "acda74b1-ffb9-417a-b3bf-fd00cba7fd00",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "c4f40171-41c2-4dbf-a4b8-7c65671a29fb"
+        },
+        "timestamp": "2026-07-14T15:55:53.326Z"
+    },
+    {
+        "id": "c26b9b5d-5deb-4a2d-9dd1-e62db0682a57",
+        "userId": "u1",
+        "action": "SESSION_REUSED",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "c4f40171-41c2-4dbf-a4b8-7c65671a29fb"
+        },
+        "timestamp": "2026-07-14T15:57:09.352Z"
+    },
+    {
+        "id": "efa04548-8ef4-4e3c-8a5c-e465e05ff8c3",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T15:57:14.150Z"
+    },
+    {
+        "id": "42a82e5d-4b3e-477a-8c28-f3a4da2a4537",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "b1ca255d-0159-478c-9137-bcd8f036c0c7"
+        },
+        "timestamp": "2026-07-14T15:57:23.650Z"
     }
 ]

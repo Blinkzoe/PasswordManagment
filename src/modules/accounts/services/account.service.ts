@@ -38,7 +38,8 @@ export class AccountService {
 
                 id: account.id,
 
-                platform: account.platform
+                platform: account.platform,
+                username: account.username
 
             }));
 
@@ -59,7 +60,8 @@ export class AccountService {
 
             id: account.id,
 
-            platform: account.platform
+            platform: account.platform,
+            username: account.username
 
         }));
 

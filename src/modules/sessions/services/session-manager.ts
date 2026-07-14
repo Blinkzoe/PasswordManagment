@@ -2,13 +2,10 @@ import { randomUUID } from "crypto";
 import { Browser, BrowserContext, Page } from "playwright";
 import { Session } from "../types/session.js";
 
-
 export class SessionManager {
-
 
     private sessions =
         new Map<string, Session>();
-
 
 
     public createSession(
@@ -25,42 +22,28 @@ export class SessionManager {
 
     ): string {
 
-
         const sessionId =
             randomUUID();
 
-
-
         const session: Session = {
-
 
             id: sessionId,
 
-
             userId,
-
 
             accountId,
 
-
             browser,
-
 
             context,
 
-
             page,
-
 
             createdAt: new Date(),
 
-
             lastAccess: new Date()
 
-
         };
-
-
 
         this.sessions.set(
             sessionId,
@@ -71,12 +54,13 @@ export class SessionManager {
             "disconnected",
             () => {
 
-                this.sessions.delete(
+                console.log(
+                    "Browser disconnected:",
                     sessionId
                 );
 
-                console.log(
-                    `Session ${sessionId} removed because browser closed`
+                this.sessions.delete(
+                    sessionId
                 );
 
             }
@@ -88,112 +72,114 @@ export class SessionManager {
 
 
 
-
     public getSession(
         sessionId: string
     ): Session | undefined {
-
-
 
         const session =
             this.sessions.get(
                 sessionId
             );
 
-
-
         if (session) {
-
 
             session.lastAccess =
                 new Date();
 
-
         }
-
-
 
         return session;
 
     }
 
 
-        public hasSessionAlive(
-            session: Session
-        ): boolean {
+
+    public getAllSessions(): Session[] {
+
+        return Array.from(
+            this.sessions.values()
+        );
+
+    }
 
 
-            try {
 
-                return session.browser.isConnected();
+    public findByAccount(
 
-            } catch {
+        userId: string,
 
-                return false;
+        accountId: string
 
-            }
+    ): Session | undefined {
 
-        }
+        for (const session of this.sessions.values()) {
 
+            if (
 
-        public async findByAccount(
-            userId:string,
-            accountId:string
-        ): Promise<Session | undefined> {
+                session.userId === userId &&
 
+                session.accountId === accountId
 
-            for (const session of this.sessions.values()) {
+            ) {
 
+                const pages =
+                    session.context.pages();
+
+                console.log("Checking session");
+
+                console.log({
+
+                    id:
+                        session.id,
+
+                    connected:
+                        session.browser.isConnected(),
+
+                    pages:
+                        pages.length,
+
+                    pageClosed:
+                        pages.length > 0
+                            ? pages[0].isClosed()
+                            : true
+
+                });
 
                 if (
-                    session.userId === userId &&
-                    session.accountId === accountId
+
+                    !session.browser.isConnected() ||
+
+                    pages.length === 0 ||
+
+                    pages[0].isClosed()
+
                 ) {
 
+                    console.log(
+                        "Removing dead session"
+                    );
 
-                    console.log("CHECKING SESSION");
+                    this.sessions.delete(
+                        session.id
+                    );
 
-                    console.log({
-                        id: session.id,
-                        connected: session.browser.isConnected(),
-                        pages: session.context.pages().length
-                    });
-
-
-                    const pages =
-                        session.context.pages();
-
-
-                    if (
-                        !session.browser.isConnected() ||
-                        pages.length === 0
-                    ) {
-
-                        console.log(
-                            "Removing dead session:",
-                            session.id
-                        );
-
-
-                        this.sessions.delete(
-                            session.id
-                        );
-
-
-                        return undefined;
-
-                    }
-
-                    return session;
+                    return undefined;
 
                 }
 
+                session.lastAccess =
+                    new Date();
+
+                return session;
+
             }
 
-
-            return undefined;
-
         }
+
+        return undefined;
+
+    }
+
 
 
     public async closeSession(
@@ -202,35 +188,23 @@ export class SessionManager {
 
     ): Promise<void> {
 
-
-
         const session =
             this.sessions.get(
                 sessionId
             );
 
-
-
         if (!session) {
-
 
             return;
 
-
         }
 
-
-
         await session.browser.close();
-
-
 
         this.sessions.delete(
             sessionId
         );
 
-
     }
-
 
 }

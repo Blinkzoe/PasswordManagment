@@ -1,88 +1,85 @@
-import { chromium } from "playwright";
+import { Page } from "playwright";
 import { BaseConnector } from "./base.connector.js";
+
 
 export class OdessaTekConnector implements BaseConnector {
 
+
     public async login(
+        page: Page,
         loginUrl: string,
         username: string,
         password: string
     ): Promise<boolean> {
 
-        const browser = await chromium.launch({
-            headless: false
-        });
 
         try {
 
-            const page = await browser.newPage();
 
-            // Abrir la página principal
             await page.goto(
                 loginUrl,
                 {
-                    waitUntil: "networkidle"
+                    waitUntil:"networkidle"
                 }
             );
 
-            // Abrir el modal de login
+
             await page
                 .locator("a")
                 .filter({
-                    hasText: "Ingresa aquí"
+                    hasText:"Ingresa aquí"
                 })
                 .click();
 
-            // Esperar el iframe
-            const iframeLocator =
-                page.locator("#exampleModal iframe");
-
-            await iframeLocator.waitFor();
 
             const frame =
-                await iframeLocator.contentFrame();
+                await page
+                .locator("#exampleModal iframe")
+                .contentFrame();
 
-            if (!frame) {
+
+            if(!frame){
                 throw new Error(
-                    "Login iframe not found."
+                    "Login iframe not found"
                 );
             }
 
-            // Usuario
-            await frame
-                .getByRole("textbox", {
-                    name: "Cuenta"
-                })
-                .fill(username);
 
-            // Password
             await frame
-                .getByRole("textbox", {
-                    name: "***"
-                })
-                .fill(password);
+            .getByRole("textbox",{
+                name:"Cuenta"
+            })
+            .fill(username);
 
-            // Login
+
+
             await frame
-                .getByRole("button", {
-                    name: "INGRESAR"
-                })
-                .click();
+            .getByRole("textbox",{
+                name:"***"
+            })
+            .fill(password);
 
-            // Esperar unos segundos
+
+
+            await frame
+            .getByRole("button",{
+                name:"INGRESAR"
+            })
+            .click();
+
+
+
             await page.waitForTimeout(5000);
+
 
             return true;
 
-        } catch (error) {
+
+        } catch(error){
 
             console.error(error);
 
             return false;
-
-        } finally {
-
-            await browser.close();
 
         }
 

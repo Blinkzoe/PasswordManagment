@@ -54,5 +54,43 @@
         "action": "REVEAL_PASSWORD",
         "resource": "odessatek",
         "timestamp": "2026-07-14T13:39:43.982Z"
+    },
+    {
+        "id": "511ad319-3e42-4091-b576-b588ae1ad84f",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T14:23:59.657Z"
+    },
+    {
+        "id": "9a27914e-0f6f-4dcf-b32e-0f9ef0c0d895",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T14:25:39.301Z"
+    },
+    {
+        "id": "5b0f732b-4e9b-452e-8085-71ed834f376b",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T14:26:06.972Z"
+    },
+    {
+        "id": "63294435-768f-4cc9-8e61-9ab0b302ffc1",
+        "userId": "u1",
+        "action": "REVEAL_PASSWORD",
+        "resource": "odessatek",
+        "timestamp": "2026-07-14T14:35:32.441Z"
+    },
+    {
+        "id": "a4b7766a-23d3-4a87-a52f-0f021031ec6f",
+        "userId": "u1",
+        "action": "LOGIN_SUCCESS",
+        "resource": "odessatek",
+        "metadata": {
+            "sessionId": "8b46ff8f-1839-4be9-947a-2b070499b273"
+        },
+        "timestamp": "2026-07-14T14:35:41.552Z"
     }
 ]

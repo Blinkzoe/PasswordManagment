@@ -1,58 +1,33 @@
-import { chromium } from "playwright";
+import { Page } from "playwright";
 import { BaseConnector } from "./base.connector.js";
 
-
-export class FacebookConnector
-implements BaseConnector {
-
+export class FacebookConnector implements BaseConnector {
 
     public async login(
+        page: Page,
         loginUrl: string,
         username: string,
         password: string
     ): Promise<boolean> {
 
+        try {
 
-        const browser =
-            await chromium.launch({
-                headless:false
+            await page.goto(loginUrl, {
+                waitUntil: "networkidle"
             });
 
+            console.log("Username:", username);
+            console.log("Password received");
 
-        const page =
-            await browser.newPage();
+            return true;
 
+        } catch (error) {
 
+            console.error(error);
 
-        await page.goto(
-            loginUrl
-        );
+            return false;
 
-
-
-        await page.waitForTimeout(
-            3000
-        );
-
-
-
-        console.log(
-            "Username:",
-            username
-        );
-
-
-        console.log(
-            "Password received"
-        );
-
-
-
-        await browser.close();
-
-
-
-        return true;
+        }
 
     }
 

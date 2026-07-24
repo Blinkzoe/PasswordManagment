@@ -1,87 +1,46 @@
-import { AccountRepository } from "../../accounts/repositories/account.repository.js";
-import { PermissionRepository } from "../../permissions/repositories/permission.repository.js";
-import { decrypt } from "./encryption.js";
-import { AppError } from "../../../shared/errors/app-error.js";
-import { AuditRepository } from "../../audit/repositories/audit.repository.js";
-import crypto from "crypto";
+import { Browser, Page } from "playwright";
+import { BaseConnector } from "./base.connector.js";
 
-export class PasswordService {
+export class FacebookConnector implements BaseConnector {
 
+    public async login(
+        page: Page,
+        loginUrl: string,
+        username: string,
+        password: string
+    ): Promise<boolean> {
 
-    private accountRepository =
-        new AccountRepository();
+        try {
 
-
-    private permissionRepository =
-        new PermissionRepository();
-
-    
-    private auditRepository =
-        new AuditRepository();
-
-
-    public revealPassword(
-        userId: string,
-        accountId: string
-    ): string {
-
-
-        const hasAccess =
-            this.permissionRepository.hasAccess(
-                userId,
-                accountId
+            await page.goto(
+                loginUrl,
+                {
+                    waitUntil: "networkidle"
+                }
             );
 
-
-        if (!hasAccess) {
-
-            throw new AppError(
-                "Access denied",
-                403
+            console.log(
+                "Username:",
+                username
             );
+
+            console.log(
+                "Password received"
+            );
+
+            // TODO:
+            // Implement Facebook automation here
+
+            return true;
+
+        } catch (error) {
+
+            console.error(error);
+
+            return false;
 
         }
 
-
-        const account =
-            this.accountRepository.findById(
-                accountId
-            );
-
-
-        if (!account) {
-
-            throw new AppError(
-                "Account not found",
-                404
-            );
-
-        }
-
-
-        const password =
-            decrypt(
-                account.encryptedPassword
-            );
-
-
-        this.auditRepository.save({
-
-            id: crypto.randomUUID(),
-
-            userId,
-
-            action: "REVEAL_PASSWORD",
-
-            resource: accountId,
-
-            timestamp:
-                new Date().toISOString()
-
-        });
-
-
-        return password;
     }
 
 }
